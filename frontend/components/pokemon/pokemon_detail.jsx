@@ -12,10 +12,11 @@ class PokemonDetail extends React.Component {
     render() {
         const {pokemon, items, moves} = this.props;
         if (!pokemon.id) return <h3>Loading...</h3>
+        debugger
         return(
             <div className="pokemon-show">
                 <ul className="pokemon-info">
-                    <li><img src={pokemon.imgUrl} alt="pokemon-img"/></li>
+                    <li><img src={`${pokemon.imageUrl}`} alt="pokemon-img"/></li>
                     <li>{pokemon.name}</li>
                     <li>{pokemon.pokeType}</li>
                     <li>{pokemon.attack}</li>
@@ -25,7 +26,7 @@ class PokemonDetail extends React.Component {
                     {moves.map(move => move.name).join(", ")}
                 </div>
                 <ul className="pokemon-items">
-                    {items.map( item => <li><img src={item.imgUrl} alt="item-img"/></li>)}
+                    {items.map( item => <li><img src={item.imageUrl} alt="item-img"/></li>)}
                 </ul>
             </div>
         )

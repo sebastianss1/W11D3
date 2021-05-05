@@ -273,12 +273,13 @@ var PokemonDetail = /*#__PURE__*/function (_React$Component) {
           items = _this$props.items,
           moves = _this$props.moves;
       if (!pokemon.id) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Loading...");
+      debugger;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pokemon-show"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "pokemon-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: pokemon.imgUrl,
+        src: "".concat(pokemon.imageUrl),
         alt: "pokemon-img"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pokemon.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pokemon.pokeType), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pokemon.attack), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, pokemon.defense)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "pokemon-moves"
@@ -288,7 +289,7 @@ var PokemonDetail = /*#__PURE__*/function (_React$Component) {
         className: "pokemon-items"
       }, items.map(function (item) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-          src: item.imgUrl,
+          src: item.imageUrl,
           alt: "item-img"
         }));
       })));
