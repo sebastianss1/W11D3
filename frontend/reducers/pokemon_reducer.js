@@ -2,8 +2,8 @@ import { RECEIVE_ALL_POKEMON, RECEIVE_POKEMON } from './../actions/pokemon_actio
 
 
 const pokemonReducer = (state = {}, action) => {
-  debugger
   Object.freeze(state);
+  
   switch (action.type){
   case RECEIVE_ALL_POKEMON:
     return Object.assign({}, action.pokemon, state);

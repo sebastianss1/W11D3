@@ -1,10 +1,35 @@
+import React from 'react';
 
-// export const PokemonDetail = ({pokemon, items, moves}) => {
-//     <div>
-//         <ul>
-//             <li>{pokemon.name}</li>
-//             <li>{ for ( let itemId in items ) }</li>
-//             <li>{pokemon.name}</li>
-//         </ul>
-//     </div>
-// }
+class PokemonDetail extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.requestPokemon(this.props.match.params.pokemonId)
+    }
+
+    render() {
+        const {pokemon, items, moves} = this.props;
+        if (!pokemon.id) return <h3>Loading...</h3>
+        return(
+            <div className="pokemon-show">
+                <ul className="pokemon-info">
+                    <li><img src={pokemon.imgUrl} alt="pokemon-img"/></li>
+                    <li>{pokemon.name}</li>
+                    <li>{pokemon.pokeType}</li>
+                    <li>{pokemon.attack}</li>
+                    <li>{pokemon.defense}</li>
+                </ul>
+                <div className="pokemon-moves">
+                    {moves.map(move => move.name).join(", ")}
+                </div>
+                <ul className="pokemon-items">
+                    {items.map( item => <li><img src={item.imgUrl} alt="item-img"/></li>)}
+                </ul>
+            </div>
+        )
+    }
+}
+
+export default PokemonDetail;

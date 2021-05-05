@@ -2,7 +2,6 @@ import { RECEIVE_ITEM } from './../actions/items_actions';
 import { RECEIVE_POKEMON } from './../actions/pokemon_actions';
 
 const itemsReducer = (state = {}, action) => {
-    debugger
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_POKEMON:

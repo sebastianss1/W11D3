@@ -3,7 +3,6 @@ import { RECEIVE_MOVE } from './../actions/moves_actions';
 
 
 const movesReducer = (state = {}, action) => {
-    debugger
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_POKEMON:

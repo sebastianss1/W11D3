@@ -7,12 +7,10 @@ class PokemonIndex extends React.Component{
   }
   
   componentDidMount(){
-    debugger
-  this.props.requestAllPokemon()
+    this.props.requestAllPokemon()
   }
   
   render(){
-    debugger
     const pokemonItems = this.props.pokemon.map(poke => (
       <PokemonIndexItem key={poke.id} poke={poke} />
     ));
